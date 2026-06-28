@@ -1,0 +1,140 @@
+/* ---------------------------------------------------- */
+/* Custom Styles for Cinematic Wedding Invitation Website */
+/* ---------------------------------------------------- */
+
+/* Gold Foil Text Shimmer */
+.gold-foil-text {
+    background: linear-gradient(
+        to right,
+        #BF953F 0%,
+        #FCF6BA 25%,
+        #B38728 50%,
+        #FBF5B7 75%,
+        #AA7C11 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 6s linear infinite;
+    text-shadow: 0 1px 2px rgba(212, 175, 55, 0.15);
+}
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Diya Flicker Animation */
+.diya-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 40px;
+}
+
+.diya-flame {
+    width: 12px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ff5100 0%, #ffbb00 60%, #ffffcc 100%);
+    border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%;
+    animation: flicker 2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 6px rgba(255, 100, 0, 0.9));
+    transform-origin: bottom center;
+}
+
+.diya-base {
+    width: 28px;
+    height: 12px;
+    background: linear-gradient(135deg, #aa7c11 0%, #7d5c32 100%);
+    border-radius: 0 0 14px 14px;
+    margin-top: 1px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.diya-base::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    background: rgba(255, 239, 166, 0.4);
+    border-radius: 50%;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scale(0.95) rotate(-2deg);
+        filter: drop-shadow(0 0 5px rgba(255, 100, 0, 0.8));
+    }
+    100% {
+        transform: scale(1.05) rotate(3deg);
+        filter: drop-shadow(0 0 9px rgba(255, 120, 0, 1)) brightness(1.1);
+    }
+}
+
+/* Wax Seal Diya Glow (Lord Murugan Vel Highlight) */
+.diya-glow {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.9));
+}
+
+/* Scroll Trigger Reveal CSS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Arch Patterns and Borders */
+.royal-border-top {
+    border-top: 6px double #D4AF37;
+    position: relative;
+}
+
+
+
+/* Custom Scrollbar for Sandal Gold Theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFDF9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #AA7C11;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #800020;
+}
+
+/* Simple keyframe fade-in classes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* General Layout Smoothness */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
