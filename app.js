@@ -406,8 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const blessingsBoard = document.getElementById('blessings-board');
 
     // **CONFIGURATION**: Paste your deployed Google Apps Script Web App URL here
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYrmEAvEXNOzUd5bw90QSl7dKMS7t5k_6LdhjxtWOEQ8kjg_eMznCe4LQwf8pvwwxRzw/exec';
-
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzW5XyYTtXL1Hh9NXcj-0osl4PcwvO7NpB-4OpXekE3L9xmLRZWwk5xj-h8g-h1pTKRsA/exec';
     if (rsvpForm) {
         rsvpForm.addEventListener('submit', async (e) => {
             e.preventDefault();
