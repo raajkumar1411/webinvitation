@@ -297,9 +297,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- SACRED COUNTDOWN TIMER ---
-    // Target Muhurtham date: August 29, 2026 07:15 AM (IST)
+    // Target Muhurtham date: August 30, 2026 07:15 AM (IST)
     // 07:15 AM IST translates to UTC: 01:45 AM
-    const targetDate = new Date('2026-08-29T07:15:00+05:30').getTime();
+    const targetDate = new Date('2026-08-30T07:15:00+05:30').getTime();
 
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
@@ -508,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
             rsvpSubmitBtn.innerHTML = `
                 <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.301A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
                 <span>RECORDING YOUR RESPONSE...</span>
             `;
