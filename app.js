@@ -297,9 +297,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- SACRED COUNTDOWN TIMER ---
-    // Target Muhurtham date: August 30, 2026 07:15 AM (IST)
-    // 07:15 AM IST translates to UTC: 01:45 AM
-    const targetDate = new Date('2026-08-30T07:15:00+05:30').getTime();
+    // Target Muhurtham date: August 30, 2026 07:30 AM (IST)
+    // 07:30 AM IST translates to UTC: 02:00 AM
+    const targetDate = new Date('2026-08-30T07:30:00+05:30').getTime();
 
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
@@ -603,5 +603,27 @@ document.addEventListener('DOMContentLoaded', () => {
             rsvpError.classList.add('hidden');
         });
     }
+
+    // --- SCROLL PROGRESS INDICATOR EVENT ---
+    window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        const progressBar = document.getElementById('scroll-progress');
+        if (progressBar) {
+            progressBar.style.width = scrolled + '%';
+        }
+
+        // Hide mobile scroll hint after scrolling down
+        const scrollHint = document.getElementById('mobile-scroll-hint');
+        if (scrollHint) {
+            if (winScroll > 40) {
+                scrollHint.style.opacity = '0';
+                scrollHint.style.pointerEvents = 'none';
+            } else {
+                scrollHint.style.opacity = '1';
+            }
+        }
+    });
 
 });

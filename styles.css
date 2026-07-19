@@ -138,3 +138,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+/* Scroll Progress Bar Shadow Glow */
+#scroll-progress {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 5px rgba(128, 0, 32, 0.4);
+}
